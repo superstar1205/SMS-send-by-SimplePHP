@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px !important;
+}
+
+.login {
+    max-width: 1180px;
+    display: flex;
+    background-color: rgb(230, 230, 230);
+    border: rgb(255, 255, 255) 3px solid;
+    border-radius: 0px 50px 0px 50px;
+    box-shadow: 15px 15px 20px 5px rgba(119, 119, 119, 0.3), -15px -15px 20px 5px rgba(255, 255, 255, 0.8), inset 5px 5px 20px 5px rgba(119, 119, 119, 0.3), inset -15px -15px 20px 5px rgba(255, 255, 255, 0.8);
+}
+
+.home {
+    max-width: 1180px;
+    display: flex;
+    padding: 16px 32px;
+    flex-direction: column;
+    background-color: rgb(230, 230, 230);
+    border: rgb(255, 255, 255) 3px solid;
+    border-radius: 0px 50px 0px 50px;
+    box-shadow: 15px 15px 20px 5px rgba(119, 119, 119, 0.3), -15px -15px 20px 5px rgba(255, 255, 255, 0.8), inset 5px 5px 20px 5px rgba(119, 119, 119, 0.3), inset -15px -15px 20px 5px rgba(255, 255, 255, 0.8);
+}
+
+.loginform {
+    max-width: 320px;
+    padding: 60px 32px;
+}
+
+.img-box {
+    width: 440px;
+    background-image: url(bg.svg);
+    background-size: cover;
+    border-radius: 0px 50px 0px 0px;
+}
+
+.error,
+.top-text,
+.dev-input,
+.submit {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+}
+
+.top-text {
+    font-size: 80px;
+}
+
+.dev-input {
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgb(233, 231, 231);
+    width: 240px;
+    border-radius: 30px;
+    border: solid 3px rgb(255, 255, 255);
+    box-shadow: inset 10px 10px 20px 0px rgba(119, 119, 119, 0.3), inset -10px -10px 20px 0px rgba(255, 255, 255, 0.8), 15px 15px 20px 5px rgba(119, 119, 119, 0.3), -15px -15px 20px 5px rgba(255, 255, 255, 0.8);
+    text-align: left;
+}
+
+.logout {
+    position: absolute;
+    margin-top: 32px !important;
+    top: 0px;
+    right: 32px;
+}
+
+.msg {
+    position: absolute;
+    top: 20px;
+    padding: 16px;
+    background-color: cornflowerblue;
+    border-radius: 16px;
+    width: 280px;
+    text-align: center;
+    font-size: 24px;
+    z-index: 100;
+}
+
+.submit {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    padding: 8px 32px;
+    margin-top: 50px;
+    background-color: rgb(233, 231, 231);
+    transition: 0.5s;
+    border: solid 3px rgba(250, 248, 248, 1);
+    border-radius: 30px;
+    color: #888;
+    text-shadow: 0 0 1px rgb(68, 68, 68);
+}
+
+.submit:hover {
+    border: solid 3px rgb(255, 255, 255);
+    color: black;
+    box-shadow: 15px 15px 20px 5px rgba(119, 119, 119, 0.3), -15px -15px 20px 5px rgba(255, 255, 255, 0.8);
+}
+
+@media(max-width: 767px) {
+    .login {
+        padding: 32px 32px;
+    }
+    .img-box {
+        display: none;
+    }
+}
