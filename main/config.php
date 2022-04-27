@@ -2,11 +2,11 @@
 
 $sname= "localhost";
 
-$unmae= "hi_dev";
+$unmae= "root";
 
-$password = "FNtlfvir0105!";
+$password = "";
 
-$db_name = "hi_smsdb";
+$db_name = "smssend";
 
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 
