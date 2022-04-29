@@ -36,7 +36,7 @@ if (isset($_POST['name']) && isset($_POST['address'])) {
             CURLOPT_POSTFIELDS => "{\r
             \"messages\": [\r
                 {\r
-                    \"content\": \"Name: ".$name.", Address: ".$add.", Status: ".$status."\",\r
+                    \"content\": \"Name: ".$name.", Address: ".$add.", Status: ".$status.", JobDescription: ".$jobdes.", JobDate: ".$jobdate.", Ref: ".$ref."\",\r
                     \"from\": \"Devking\",\r
                     \"to\": [\r
                         \"14168232377\",\r
@@ -61,21 +61,19 @@ if (isset($_POST['name']) && isset($_POST['address'])) {
         if ($err) {
             echo "cURL Error #:" . $err;
         } else {
-            echo $response;
+            $name = "'".$name."'";
+            $add = "'".$add."'";
+            $phone = "'".$phone."'";
+            $status = "'".$status."'";
+            $jobdes = "'".$jobdes."'";
+            $jobdate = "'".$jobdate."'";
+            $ref = "'".$ref."'";
+
+            $sql = "INSERT INTO messages (name, address, phone, status, jobdes, jobdate, ref) VALUES ($name, $add, $phone, $status, $jobdes, $jobdate, $ref)";
+            mysqli_query($conn, $sql);
+            $_SESSION['msg'] = "SMS send Success!";
+            header("Location: home.php");
         }
-
-        $name = "'".$name."'";
-        $add = "'".$add."'";
-        $phone = "'".$phone."'";
-        $status = "'".$status."'";
-        $jobdes = "'".$jobdes."'";
-        $jobdate = "'".$jobdate."'";
-        $ref = "'".$ref."'";
-
-        $sql = "INSERT INTO messages (name, address, phone, status, jobdes, jobdate, ref) VALUES ($name, $add, $phone, $status, $jobdes, $jobdate, $ref)";
-        mysqli_query($conn, $sql);
-        $_SESSION['msg'] = "SMS send Success!";
-        header("Location: home.php");
     }
 }else{
     header("Location: ../index.php");
