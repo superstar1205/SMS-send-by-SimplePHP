@@ -46,9 +46,9 @@ if (isset($_POST['name']) && isset($_POST['address'])) {
             ]\r
         }",
             CURLOPT_HTTPHEADER => [
-                "Authorization: Basic YmduYTE2MTQ6VzFNdDg4YUY=",
+                "Authorization: YOUR D7 Authorization ",
                 "X-RapidAPI-Host: d7sms.p.rapidapi.com",
-                "X-RapidAPI-Key: 709e89502fmsh75fec966c5c26cbp105fdfjsn909fd8df0446",
+                "X-RapidAPI-Key: YOUR -RapidAPI- KEY",
                 "content-type: application/json"
             ],
         ]);
