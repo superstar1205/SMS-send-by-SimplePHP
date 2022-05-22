@@ -3,7 +3,7 @@
 ## how to run
 First download and then setup DB on your MySQl database.
 Second get API key on (https://d7sms.p.rapidapi.com) and set it on main/smssend.php
-and then you canrun it on your local or cpanel.
+and then you can run it on your local or cpanel.
  
  ![mobile (1)](https://user-images.githubusercontent.com/86986628/166074994-56cd723e-2b9f-4996-8a9f-d334292a2842.gif)
 
